@@ -1,7 +1,7 @@
 import { z } from "zod"
 
 export const schemaLogin = z.object({
-  email: z.string().email("Entre com um e-mail válido"),
+  email: z.string().nonempty("E-mail é obrigatório").email("Entre com um e-mail válido"),
   password: z.string().nonempty("Senha é obrigatória")
 });
 

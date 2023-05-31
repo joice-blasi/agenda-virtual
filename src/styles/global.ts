@@ -29,8 +29,9 @@ export const GlobalStyle = createGlobalStyle`
     --gray-300: #DEE2E6;
     --gray-100: #F1F3F5;
     --gray-0: #F8F9FA;
+    --alert-error: #C73128;
 
-    font-size: 60%;
+    font-size: 50%;
   }
 
   @media(min-width: 700px) {
@@ -39,7 +40,7 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  h1, h2, h3, h4, h5, h6, p, a, span, li, button, input {
+  h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, label {
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--gray-900)
   }

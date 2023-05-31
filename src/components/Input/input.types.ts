@@ -1,4 +1,4 @@
-import { UseFormRegisterReturn } from "react-hook-form";
+import { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 export interface IInputProps {
   id: string,
@@ -6,4 +6,5 @@ export interface IInputProps {
   type: "text" | "email" | "password" | "tel" | "number",
   placeholder: string,
   register: UseFormRegisterReturn,
+  error?: FieldError
 }
