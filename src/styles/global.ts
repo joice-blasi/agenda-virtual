@@ -34,14 +34,25 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 50%;
   }
 
+  h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, label {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--gray-900)
+  }
+
+  .container {
+    width: 100%;
+    max-width: 650px;
+    min-width: 280px;
+    margin: 0 auto;
+  }
+
   @media(min-width: 700px) {
     :root {
       font-size: 62.5%;
     }
-  }
 
-  h1, h2, h3, h4, h5, h6, p, a, span, li, button, input, label {
-    font-family: "IBM Plex Sans", sans-serif;
-    color: var(--gray-900)
+    .container {
+      max-width: 1075px;
+    }
   }
 `

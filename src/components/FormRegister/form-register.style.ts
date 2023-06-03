@@ -4,7 +4,7 @@ export const StyledRegisterForm = styled.section`
   display: flex;
   justify-content: center;
   
-  .container {
+  .cont-form {
     background-color: var(--gray-0);
     width: 100%;
     min-width: 280px;

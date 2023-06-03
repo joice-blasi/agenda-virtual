@@ -18,7 +18,7 @@ export const RegisterForm = () => {
 
   return (
     <StyledRegisterForm>
-      <div className="container">
+      <div className="cont-form">
         <h2>Cadastro</h2>
         <form onSubmit={handleSubmit(userRegister)}>
         

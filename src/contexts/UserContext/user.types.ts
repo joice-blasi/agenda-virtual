@@ -8,5 +8,8 @@ export interface IUserProviderProps {
 
 export interface IUserContext {
   signIn: (data: LoginData) => void,
-  userRegister: (data: RegisterData) => void
+  userRegister: (data: RegisterData) => void,
+  loading: boolean,
+  logout: () => void,
+  formatDate: (date: Date) => string,
 }

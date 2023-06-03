@@ -18,7 +18,7 @@ export const LoginForm = () => {
 
   return (
     <StyledLoginForm>
-      <div className="container">
+      <div className="cont-form">
         <h2>Login</h2>
         <form onSubmit={handleSubmit(signIn)}>
           <Input id="email" label="Email" type="text" placeholder="Digite seu email" register={register("email")} error={errors.email}/>
