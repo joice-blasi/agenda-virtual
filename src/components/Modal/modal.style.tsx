@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledModalCreate = styled.div`
+export const StyledModal = styled.div`
   top: 0;
   right: 0;
   background-color: rgba(134, 142, 150, .5);

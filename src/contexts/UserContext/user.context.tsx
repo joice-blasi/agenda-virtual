@@ -22,6 +22,8 @@ export const UserProvider = ({children}: IUserProviderProps) => {
     setLoading(false);
   }, [])
 
+  
+
   const signIn = async (data: LoginData) => {
     try {
       const response = await api.post("/login", data);
