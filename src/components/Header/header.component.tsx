@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { StyledHeader } from "./header.style"
-import { FiLogOut } from "react-icons/fi"
+import { StyledHeader } from "./header.style";
+import { FiLogOut } from "react-icons/fi";
 import { UserContext } from "../../contexts/UserContext/user.context";
 
 export const Header = () => {

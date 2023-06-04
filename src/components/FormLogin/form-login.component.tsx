@@ -1,20 +1,20 @@
-import { useForm } from "react-hook-form"
-import { Input } from "../Input/input.component"
-import { Button } from "../Button/button.component"
-import { StyledLoginForm } from "./form-login.style"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { LoginData, schemaLogin } from "./form-login.validator"
-import { useContext } from "react"
-import { UserContext } from "../../contexts/UserContext/user.context"
-import { Link } from "react-router-dom"
+import { useForm } from "react-hook-form";
+import { Input } from "../Input/input.component";
+import { Button } from "../Button/button.component";
+import { StyledLoginForm } from "./form-login.style";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { LoginData, schemaLogin } from "./form-login.validator";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext/user.context";
+import { Link } from "react-router-dom";
 
 export const LoginForm = () => {
   const {register, handleSubmit, formState: {errors}} = useForm<LoginData>({
     mode: "onBlur",
     resolver: zodResolver(schemaLogin)
-  })
+  });
 
-  const {signIn} = useContext(UserContext)
+  const {signIn} = useContext(UserContext);
 
   return (
     <StyledLoginForm>

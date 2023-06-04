@@ -1,6 +1,6 @@
-import { useContext } from "react"
-import { Modal } from "../Modal/modal.component"
-import { UserContext } from "../../contexts/UserContext/user.context"
+import { useContext } from "react";
+import { Modal } from "../Modal/modal.component";
+import { UserContext } from "../../contexts/UserContext/user.context";
 import { UpdateUserData, schemaUpdateUser } from "./modal-update-user.validator";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";

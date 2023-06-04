@@ -37,8 +37,4 @@ export const StyledListContacts = styled.div`
     text-align: center;
     padding: 4rem 0;
   }
-
-  @media (min-width: 700px) {
-
-  }
 `

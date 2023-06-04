@@ -1,20 +1,20 @@
-import { useForm } from "react-hook-form"
-import { Input } from "../Input/input.component"
-import { RegisterData, schemaRegister } from "./form-register.validator"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useContext } from "react"
-import { UserContext } from "../../contexts/UserContext/user.context"
-import { StyledRegisterForm } from "./form-register.style"
-import { Button } from "../Button/button.component"
-import { Link } from "react-router-dom"
+import { useForm } from "react-hook-form";
+import { Input } from "../Input/input.component";
+import { RegisterData, schemaRegister } from "./form-register.validator";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useContext } from "react";
+import { UserContext } from "../../contexts/UserContext/user.context";
+import { StyledRegisterForm } from "./form-register.style";
+import { Button } from "../Button/button.component";
+import { Link } from "react-router-dom";
 
 export const RegisterForm = () => {
   const {register, handleSubmit, formState: {errors}} = useForm<RegisterData>({
     mode: "onBlur",
     resolver: zodResolver(schemaRegister)
-  })
+  });
 
-  const {userRegister} = useContext(UserContext)
+  const {userRegister} = useContext(UserContext);
 
   return (
     <StyledRegisterForm>

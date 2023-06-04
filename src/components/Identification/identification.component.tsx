@@ -1,6 +1,6 @@
-import { useContext, useEffect, useState } from "react"
-import { StyledIdentification } from "./identification.style"
-import { UserContext } from "../../contexts/UserContext/user.context"
+import { useContext, useEffect, useState } from "react";
+import { StyledIdentification } from "./identification.style";
+import { UserContext } from "../../contexts/UserContext/user.context";
 import { MdOutlineEdit } from "react-icons/md";
 import { BsTrash3 } from "react-icons/bs";
 import { ModalUpdateUser } from "../ModalUpdateUser/modal-update-user.component";
@@ -17,7 +17,7 @@ export const Identification = () => {
 
   useEffect(() => {
     me()
-  }, [])
+  }, []);
 
   return (
     <StyledIdentification className="cont-identification">

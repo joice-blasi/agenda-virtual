@@ -18,7 +18,7 @@ export const ModalCreateContact = ({toogleModalCreate}: IModalCreateProps) => {
   const {register, handleSubmit, formState: {errors}} = useForm<CreateContactData>({
     mode: "onBlur",
     resolver: zodResolver(schemaCreateContact)
-  })
+  });
 
   const submit = async (data: CreateContactData) => {
     await createContact(data);

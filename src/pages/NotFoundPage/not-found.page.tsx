@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom"
-import { Header } from "../../components/Header/header.component"
-import { StyledNotFound } from "./not-found.style"
+import { Link } from "react-router-dom";
+import { Header } from "../../components/Header/header.component";
+import { StyledNotFound } from "./not-found.style";
 
 export const NotFoundPage = () => {
   return (

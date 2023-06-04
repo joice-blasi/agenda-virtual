@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { StyledCard } from "./card.style";
 import { UserContext } from "../../contexts/UserContext/user.context";
 import {MdOutlineEdit} from "react-icons/md";
-import {BsTrash3} from "react-icons/bs"
+import {BsTrash3} from "react-icons/bs";
 import { IContact } from "../../contexts/ContactContext/contact.types";
 import { ModalUpdateContact } from "../ModalUpdateContact/modal-update-contact.component";
 import { ModalDeleteContact } from "../ModalDeleteContact/modal-delete-contact.component";

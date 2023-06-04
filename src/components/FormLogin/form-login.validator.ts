@@ -1,4 +1,4 @@
-import { z } from "zod"
+import { z } from "zod";
 
 export const schemaLogin = z.object({
   email: z.string().nonempty("E-mail é obrigatório").email("Entre com um e-mail válido"),

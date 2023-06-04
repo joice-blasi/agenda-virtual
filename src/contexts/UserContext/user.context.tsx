@@ -62,10 +62,10 @@ export const UserProvider = ({children}: IUserProviderProps) => {
     try {
       const response = await api.patch(`/users/${idUser}`, data);
       setUser(response.data);
-      toast.success("Usuário editado com sucesso!")
+      toast.success("Usuário editado com sucesso!");
     } catch (error) {
       console.log(error);
-      toast.error("Erro ao editar. Tente novamente")
+      toast.error("Erro ao editar. Tente novamente");
     }
   }
 
@@ -78,7 +78,7 @@ export const UserProvider = ({children}: IUserProviderProps) => {
       toast.success("Conta deletada com sucesso!");
     } catch (error) {
       console.log(error);
-      toast.error("Erro ao deletar. Tente novamente")
+      toast.error("Erro ao deletar. Tente novamente");
     }
   }
 

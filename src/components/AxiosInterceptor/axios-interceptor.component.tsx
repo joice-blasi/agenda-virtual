@@ -17,7 +17,7 @@ export const AxiosInterceptor = ({children}: IAxiosProps) => {
       }
 
       if(error.response?.status === 401) {
-        localStorage.removeItem("agenda-virtual:token")
+        localStorage.removeItem("agenda-virtual:token");
         setIsOpenModal(true);
       }
 
@@ -26,7 +26,7 @@ export const AxiosInterceptor = ({children}: IAxiosProps) => {
 
     const interceptor = api.interceptors.response.use(null, errorInterceptor);
 
-    return () => api.interceptors.response.eject(interceptor)
+    return () => api.interceptors.response.eject(interceptor);
   }, []);
 
   return (

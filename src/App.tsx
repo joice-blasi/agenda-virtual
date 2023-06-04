@@ -1,7 +1,7 @@
 import { AxiosInterceptor } from "./components/AxiosInterceptor/axios-interceptor.component";
-import { UserProvider } from "./contexts/UserContext/user.context"
-import { RoutesMain } from "./routes"
-import { GlobalStyle } from "./styles/global"
+import { UserProvider } from "./contexts/UserContext/user.context";
+import { RoutesMain } from "./routes";
+import { GlobalStyle } from "./styles/global";
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 

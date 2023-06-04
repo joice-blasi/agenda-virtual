@@ -1,5 +1,5 @@
-import { StyledButton } from "./button.style"
-import { IButtonProps } from "./button.types"
+import { StyledButton } from "./button.style";
+import { IButtonProps } from "./button.types";
 
 export const Button = ({text}: IButtonProps) => {
   return (

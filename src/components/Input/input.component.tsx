@@ -1,5 +1,5 @@
-import { StyledFieldset } from "./input.style"
-import { IInputProps } from "./input.types"
+import { StyledFieldset } from "./input.style";
+import { IInputProps } from "./input.types";
 
 export const Input = ({ id, label, type, placeholder, register, error }: IInputProps)=> {
   return (

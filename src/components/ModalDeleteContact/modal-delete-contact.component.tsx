@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { ContactContext } from "../../contexts/ContactContext/contact.context"
+import { useContext } from "react";
+import { ContactContext } from "../../contexts/ContactContext/contact.context";
 import { Modal } from "../Modal/modal.component";
 import { IContact } from "../../contexts/ContactContext/contact.types";
 import { StyledModalDeleteContact } from "./modal-delete-contact.style";

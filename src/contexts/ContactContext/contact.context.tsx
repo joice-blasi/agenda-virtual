@@ -10,7 +10,6 @@ export const ContactContext = createContext({} as IContactContext);
 export const ContactProvider = ({children}: IContactProviderProps) => {
   const [contacts, setContacts] = useState<IContact[]>([]);
 
-
   const createContact = async (data: CreateContactData) => {
     try {
       const response = await api.post("/contacts", data);
