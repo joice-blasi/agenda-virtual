@@ -1,5 +1,4 @@
 import { AxiosInterceptor } from "./components/AxiosInterceptor/axios-interceptor.component";
-import { ContactProvider } from "./contexts/ContactContext/contact.context";
 import { UserProvider } from "./contexts/UserContext/user.context"
 import { RoutesMain } from "./routes"
 import { GlobalStyle } from "./styles/global"
@@ -25,9 +24,7 @@ export const App = () => {
       <GlobalStyle/>
       <AxiosInterceptor>
         <UserProvider>
-          <ContactProvider>
-            <RoutesMain/>
-          </ContactProvider>
+          <RoutesMain/>
         </UserProvider>
       </AxiosInterceptor>
     </>

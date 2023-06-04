@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { Contact, IContactContext, IContactProviderProps } from "./contact.types";
+import { IContact, IContactContext, IContactProviderProps } from "./contact.types";
 import { CreateContactData } from "../../components/ModalCreateContact/modal-create-contact.validator";
 import { api } from "../../services";
 import { toast } from "react-toastify";
@@ -8,7 +8,7 @@ import { UpdateContactData } from "../../components/ModalUpdateContact/modal-upd
 export const ContactContext = createContext({} as IContactContext);
 
 export const ContactProvider = ({children}: IContactProviderProps) => {
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  const [contacts, setContacts] = useState<IContact[]>([]);
 
 
   const createContact = async (data: CreateContactData) => {

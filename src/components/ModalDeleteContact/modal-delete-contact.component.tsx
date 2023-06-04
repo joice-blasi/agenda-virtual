@@ -1,11 +1,11 @@
 import { useContext } from "react"
 import { ContactContext } from "../../contexts/ContactContext/contact.context"
 import { Modal } from "../Modal/modal.component";
-import { Contact } from "../../contexts/ContactContext/contact.types";
+import { IContact } from "../../contexts/ContactContext/contact.types";
 
 interface IModalDeleteProps {
   toogleModalDelete: () => void,
-  contact: Contact
+  contact: IContact
 }
 
 export const ModalDeleteContact = ({toogleModalDelete, contact}: IModalDeleteProps) => {

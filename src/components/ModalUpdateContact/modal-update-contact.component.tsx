@@ -7,11 +7,11 @@ import { Button } from "../Button/button.component";
 import { StyledModalUpdateForm } from "./modal-update-contact.style";
 import { useContext } from "react";
 import { ContactContext } from "../../contexts/ContactContext/contact.context";
-import { Contact } from "../../contexts/ContactContext/contact.types";
+import { IContact } from "../../contexts/ContactContext/contact.types";
 
 interface IModalUpdateProps {
   toogleModalUpdate: () => void,
-  contact: Contact
+  contact: IContact
 }
 
 export const ModalUpdateContact = ({ toogleModalUpdate, contact }: IModalUpdateProps) => {

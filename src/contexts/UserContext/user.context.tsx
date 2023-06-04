@@ -1,10 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import { IUserContext, IUserProviderProps } from "./user.types";
+import { IUser, IUserContext, IUserProviderProps } from "./user.types";
 import { LoginData } from "../../components/FormLogin/form-login.validator";
 import { RegisterData } from "../../components/FormRegister/form-register.validator";
 import { api } from "../../services";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { UpdateUserData } from "../../components/ModalUpdateUser/modal-update-user.validator";
 
 export const UserContext = createContext({} as IUserContext);
 
@@ -12,6 +13,7 @@ export const UserProvider = ({children}: IUserProviderProps) => {
   const token = localStorage.getItem("agenda-virtual:token");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState<IUser | null>(null);
 
   useEffect(() => {
     if(!token) {
@@ -21,8 +23,6 @@ export const UserProvider = ({children}: IUserProviderProps) => {
     api.defaults.headers.common.authorization = `Bearer ${token}`;
     setLoading(false);
   }, [])
-
-  
 
   const signIn = async (data: LoginData) => {
     try {
@@ -38,6 +38,15 @@ export const UserProvider = ({children}: IUserProviderProps) => {
     }
   }
 
+  const me = async () => {
+    try {
+      const response = await api.get("/users/me");
+      setUser(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const userRegister = async (data: RegisterData) => {
     try {
       await api.post("/users", data);
@@ -49,9 +58,33 @@ export const UserProvider = ({children}: IUserProviderProps) => {
     }
   }
 
+  const updateUser = async (data: UpdateUserData, idUser: string) => {
+    try {
+      const response = await api.patch(`/users/${idUser}`, data);
+      setUser(response.data);
+      toast.success("Usuário editado com sucesso!")
+    } catch (error) {
+      console.log(error);
+      toast.error("Erro ao editar. Tente novamente")
+    }
+  }
+
+  const deleteUser = async(idUser: string) => {
+    try {
+      await api.delete(`/users/${idUser}`);
+      setUser(null);
+      navigate("/");
+      toast.success("Conta deletada com sucesso!");
+    } catch (error) {
+      console.log(error);
+      toast.error("Erro ao deletar. Tente novamente")
+    }
+  }
+
   const logout = () => {
     if(token) {
       localStorage.removeItem("agenda-virtual:token");
+      setUser(null);
       navigate("/");
     }
   }
@@ -68,7 +101,7 @@ export const UserProvider = ({children}: IUserProviderProps) => {
   }
 
   return (
-    <UserContext.Provider value={{signIn, userRegister, loading, logout, formatDate}}>
+    <UserContext.Provider value={{loading, user, signIn, me, userRegister, updateUser, deleteUser, logout, formatDate}}>
       {children}
     </UserContext.Provider>
   )

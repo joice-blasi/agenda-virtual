@@ -6,7 +6,7 @@ export interface IContactProviderProps {
   children: ReactNode,
 }
 
-export interface Contact {
+export interface IContact {
   id: string,
   name: string,
   email: string,
@@ -16,8 +16,8 @@ export interface Contact {
 }
 
 export interface IContactContext {
-  contacts: Contact[],
-  setContacts: React.Dispatch<React.SetStateAction<Contact[]>>,
+  contacts: IContact[],
+  setContacts: React.Dispatch<React.SetStateAction<IContact[]>>,
   createContact: (data: CreateContactData) => void,
   updateContact: (data: UpdateContactData, idContact: string) => void,
   deleteContact: (idContact: string) => void,

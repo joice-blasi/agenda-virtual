@@ -17,6 +17,7 @@ export const AxiosInterceptor = ({children}: IAxiosProps) => {
       }
 
       if(error.response?.status === 401) {
+        localStorage.removeItem("agenda-virtual:token")
         setIsOpenModal(true);
       }
 

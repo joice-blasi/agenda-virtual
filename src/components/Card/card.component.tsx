@@ -3,13 +3,13 @@ import { StyledCard } from "./card.style";
 import { UserContext } from "../../contexts/UserContext/user.context";
 import {MdOutlineEdit} from "react-icons/md";
 import {BsTrash3} from "react-icons/bs"
-import { Contact } from "../../contexts/ContactContext/contact.types";
+import { IContact } from "../../contexts/ContactContext/contact.types";
 import { ModalUpdateContact } from "../ModalUpdateContact/modal-update-contact.component";
 import { ModalDeleteContact } from "../ModalDeleteContact/modal-delete-contact.component";
 
 
 interface CardProps {
-  contact: Contact
+  contact: IContact
 }
 
 export const Card = ({contact}: CardProps) => {
