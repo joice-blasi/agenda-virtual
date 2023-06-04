@@ -22,18 +22,30 @@ export const Identification = () => {
   return (
     <StyledIdentification className="cont-identification">
       <h3>Identificação</h3>
-      <p>{user?.name}</p>
-      <p>{user?.email}</p>
-      <p>{user?.telephone}</p>
-      <p>{user && formatDate(user?.createdAt)}</p>
-      <MdOutlineEdit onClick={toogleUpdateUser} />
-      {
-        isOpenModalUpdateUser && <ModalUpdateUser toogleUpdateUser={toogleUpdateUser} user={user!}/>
-      }
-      <BsTrash3 onClick={toogleDeleteUser} />
-      {
-        isOpenModalDeleteUser && <ModalDeleteUser toogleDeleteUser={toogleDeleteUser} idUser={user?.id!}/>
-      }
+      <div className="cont-data-buttons">
+        <section className="user-data">
+          <div className="cont-1">
+            <p>{user?.name}</p>
+            <p>{user?.email}</p>
+          </div>
+          
+          <div className="cont-2">
+            <p>{user?.telephone}</p>
+            <p>Criado em {user && formatDate(user?.createdAt)}</p>
+          </div>
+        </section>
+
+        <section className="section-buttons">
+          <MdOutlineEdit onClick={toogleUpdateUser} className="edit" />
+          {
+            isOpenModalUpdateUser && <ModalUpdateUser toogleUpdateUser={toogleUpdateUser} user={user!}/>
+          }
+          <BsTrash3 onClick={toogleDeleteUser} className="delete" />
+          {
+            isOpenModalDeleteUser && <ModalDeleteUser toogleDeleteUser={toogleDeleteUser} idUser={user?.id!}/>
+          }
+        </section>
+      </div>
     </StyledIdentification>
   )
 }

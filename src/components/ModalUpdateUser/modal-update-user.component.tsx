@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { IUser } from "../../contexts/UserContext/user.types";
 import { Input } from "../Input/input.component";
 import { Button } from "../Button/button.component";
+import { StyledModalUpdate } from "./modal-update-user.style";
 
 interface IModalUpdateUserProps {
   toogleUpdateUser: () => void,
@@ -36,15 +37,17 @@ export const ModalUpdateUser = ({toogleUpdateUser, user}: IModalUpdateUserProps)
 
   return (
     <Modal toogleModal={toogleUpdateUser} title="Editar conta">
-      <form onSubmit={handleSubmit(submit)}>
+      <StyledModalUpdate onSubmit={handleSubmit(submit)}>
         <Input id="name" label="Nome" type="text" placeholder="Digite seu nome" register={register("name")} error={errors.name}/>
 
         <Input id="email" label="Email" type="text" placeholder="Digite seu email" register={register("email")} error={errors.email}/>
 
         <Input id="telephone" label="Telefone" type="text" placeholder="Digite seu telefone" register={register("telephone")} error={errors.telephone}/>
         
-        <Button text="Editar"/>
-      </form>
+        <div className="cont-button">
+          <Button text="Editar"/>
+        </div>
+      </StyledModalUpdate>
     </Modal>
   )
 }

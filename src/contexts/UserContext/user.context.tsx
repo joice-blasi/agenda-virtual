@@ -72,6 +72,7 @@ export const UserProvider = ({children}: IUserProviderProps) => {
   const deleteUser = async(idUser: string) => {
     try {
       await api.delete(`/users/${idUser}`);
+      localStorage.removeItem("agenda-virtual:token");
       setUser(null);
       navigate("/");
       toast.success("Conta deletada com sucesso!");

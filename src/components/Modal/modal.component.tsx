@@ -38,7 +38,7 @@ export const Modal = ({toogleModal, title, children, blockClosing}: IModalProps)
         {title ?
           (<header>
             <h2>{title}</h2>
-            <AiOutlineClose onClick={() => toogleModal()} />
+            <AiOutlineClose onClick={() => toogleModal()} className="close" />
           </header>) :
           null
         }

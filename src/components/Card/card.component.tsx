@@ -23,18 +23,23 @@ export const Card = ({contact}: CardProps) => {
 
   return (
     <StyledCard>
-      <p>{contact.name}</p>
-      <p>{contact.email}</p>
-      <p>{contact.telephone}</p>
-      <p>Criado em {formatDate(contact.createdAt)}</p>
-      <MdOutlineEdit onClick={toogleModalUpdate} />
-      {
-        isOpenModalUpdate && <ModalUpdateContact toogleModalUpdate={toogleModalUpdate} contact={contact} />
-      }
-      <BsTrash3 onClick={toogleModalDelete} />
-      {
-        isOpenModalDelete && <ModalDeleteContact toogleModalDelete={toogleModalDelete} contact={contact} />
-      }
+      <section className="contact-data">
+        <p>{contact.name}</p>
+        <p>{contact.email}</p>
+        <p>{contact.telephone}</p>
+        <p>Criado em {formatDate(contact.createdAt)}</p>
+      </section>
+
+      <section className="contact-buttons">
+        <MdOutlineEdit onClick={toogleModalUpdate} className="edit-user" />
+        {
+          isOpenModalUpdate && <ModalUpdateContact toogleModalUpdate={toogleModalUpdate} contact={contact} />
+        }
+        <BsTrash3 onClick={toogleModalDelete} className="delete-user" />
+        {
+          isOpenModalDelete && <ModalDeleteContact toogleModalDelete={toogleModalDelete} contact={contact} />
+        }
+      </section>
     </StyledCard>
   )
 }

@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
 export const StyledModalCreateForm = styled.form`
-  margin-left: 2rem;
+  padding: 2rem 1.5rem;
+
+  .cont-button {
+    text-align: center;
+  }
 `

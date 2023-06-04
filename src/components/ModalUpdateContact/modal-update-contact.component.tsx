@@ -44,7 +44,9 @@ export const ModalUpdateContact = ({ toogleModalUpdate, contact }: IModalUpdateP
       
         <Input id="telephone" label="Telefone" type="text" placeholder="Digite o telefone do contato" register={register("telephone")} error={errors.telephone}/>
 
-        <Button text="Editar"/>
+        <div className="cont-button">
+          <Button text="Editar"/>
+        </div>
       </StyledModalUpdateForm>
     </Modal>
   )

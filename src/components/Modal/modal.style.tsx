@@ -13,9 +13,33 @@ export const StyledModal = styled.div`
 
   > div {
     width: 100%;
-    max-width: 750px;
+    max-width: 650px;
     min-width: 270px;
     background-color: white;
     margin: 0 2rem;
+    border-radius: 5px;
+  }
+
+  header {
+    height: 40px;
+    background-color: var(--gray-300);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  header > h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  header > .close {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    color: var(--gray-900);
   }
 `

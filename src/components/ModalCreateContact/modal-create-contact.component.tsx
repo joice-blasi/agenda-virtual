@@ -34,7 +34,9 @@ export const ModalCreateContact = ({toogleModalCreate}: IModalCreateProps) => {
               
         <Input id="telephone" label="Telefone" type="text" placeholder="Digite o telefone do contato" register={register("telephone")} error={errors.telephone}/>
 
-        <Button text="Criar" />
+        <div className="cont-button">
+          <Button text="Criar" />
+        </div>
       </StyledModalCreateForm>
     </Modal>
   )

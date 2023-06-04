@@ -29,7 +29,7 @@ export const ListContacts = () => {
       {
         isOpenModalCreate && <ModalCreateContact toogleModalCreate={toogleModalCreate} />
       }
-      <ul>
+      <ul className="list">
         {contacts && contacts.length ?
           contacts.map((contact) => <Card key={contact.id} contact={contact}/>) :
           <h4 className="empty">Nenhum contato adicionado</h4>
