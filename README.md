@@ -13,7 +13,7 @@
 
 [ Voltar para o topo ](#tabela-de-conteúdos)
 
-Trata-se de uma aplicação front-end que utiliza a [API Agenda Virtual](#https://github.com/joice-blasi/api-agenda-virtual) e é utilizada para armazenar seus contatos. A aplicação possui cadastro e login de usuário, além de CRUD de usuário e contatos. Possui um layout clean e de fácil entendimento. As tecnologias utilizadas foram:
+Trata-se de uma aplicação front-end que utiliza a [API Agenda Virtual](https://github.com/joice-blasi/api-agenda-virtual) e é utilizada para armazenar seus contatos. A aplicação possui cadastro e login de usuário, além de CRUD de usuário e contatos. Possui um layout clean e de fácil entendimento. As tecnologias utilizadas foram:
 
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://react.dev/)
